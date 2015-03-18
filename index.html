@@ -1,0 +1,507 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0;">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+		<style>
+		/*typography*/
+
+			body{
+				font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+				font-size: 100%;
+			}
+
+			p,h1,h2,h3,h4{
+				font-weight: 400;
+			}
+
+			p{
+				color:#666666;
+			}
+
+			p, h4{
+				font-size: 1em;
+				line-height: 1.8em;
+				margin-bottom: .8em;
+			}
+
+			h4{
+				font-weight: 600;
+			}
+
+			h3{
+				font-size: 1.125em;
+				line-height: 2em;
+			}
+
+			h2{
+				font-size: 2.25em;
+			}
+
+			h1{
+				font-size: 2.75em;
+				line-height: 1.45em;
+			}
+
+			a{
+				text-decoration: none;
+				padding-bottom: 2px;
+				color: #0d6ffc;
+			}
+
+			a:hover{
+				border-bottom: 1px solid #0d6ffc;
+			}
+
+			.blue a{
+				color: #FFFFFF;
+			}
+
+			.blue a:hover{
+					border-bottom: 1px solid #FFFFFF;
+			}
+
+			.bold{
+				font-weight: bold;
+			}
+
+		/*general*/
+			:after, :before{
+				box-sizing:inherit;
+			}
+			*{
+				box-sizing: border-box;
+				-webkit-font-smoothing:antialiased;
+				margin: 0;
+				padding: 0;
+			}
+
+			.blue{
+				background-color: #0d6ffc;
+				color: #FFFFFF;
+			}
+
+			.white{
+				background-color: #FFFFFF;
+				color: #565656;
+				border-bottom: 1px solid #efefef;
+			}
+
+			.wrap{
+				width: 68.75em;
+				max-width: 90%;
+				margin: 0 auto;
+				text-align: center;
+			}
+
+			img{
+				max-width: 100%;
+				border: 0;
+			}
+
+			button{
+				text-decoration: none;
+				font-family: inherit;
+				border: none;
+				cursor: pointer;
+				color: #fff;
+				font-weight: 400;
+				height: 2.5em;
+				padding: .7em 1.7em;
+				background-color: #0d6ffc;
+				position: relative;
+				font-size: 1em;
+			    line-height: 1em;
+			    border-radius: 1.2em;
+			    margin-top: 3.3125em;
+			}
+
+			button a, button a:hover{
+				text-decoration: inherit;
+				color: inherit;
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+
+			button:hover{
+				border: 1px solid #0d6ffc;
+				color: #0d6ffc;
+				background-color: #FFFFFF;
+			}
+
+		/*intro*/
+			header.site-header{
+				position: relative;
+				overflow: hidden;
+				height: 40px;
+				transition: all .4s;
+				text-align: right;
+			}
+
+			.herounit_body{
+				text-align: center;
+				clear: both;
+				margin: 35vh 0;
+			//  box-sizing: content-box;
+			}
+
+			.herounit_body h2{
+				max-width: 86%;
+				margin: 0 auto
+			}
+
+			.herounit_media{
+				text-align: center;
+				position: relative;
+				padding: 2em 0 4em;
+				margin: 14vh 0;
+			}
+
+			.herounit_media img{
+				margin: 0 auto;
+				max-width: 90%;
+			}
+
+			.herounit_media:before{
+				content:"";
+				height: 10px;
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+
+			.herounit_media img, .herounit_media picture{
+				display: block;
+			}
+
+			#hero{
+				background: #0d6ffc url(img/header_background.svg) no-repeat center;
+				border-bottom: 10px solid #297EFB;
+				padding-top: 4.5em;
+				overflow: hidden;
+				position: relative;
+				background-size: auto 100%;
+			}
+
+			.logo{
+				height: 35px;
+				width: 174px;
+			}
+
+			a.logo{
+				background: url(img/porcelain_title.svg) no-repeat center;
+				float: left;
+				background-size: auto 100%;
+			}
+
+			a:hover.logo{
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+
+			.site-header ul.inline-list{
+				min-width: 50%;
+				float: right;
+			}
+
+		/*impulse*/
+			section#impulse{
+				text-align: center;
+				margin-top: 6.5625em;
+				padding-bottom: 3.3125em;
+			}
+
+			#impulse h3{
+				max-width: 66%;
+				margin: 0 auto;
+			}
+
+			.impulse_title{
+				margin-bottom: 6.5625em;
+			}
+
+			#impulse_gallery{
+				margin-top: 3.3125em;
+				overflow: hidden;
+			//	background: #444444;
+			}
+
+			.video_container{
+				background-color: #000000;
+				position: relative;
+				padding-bottom: 56.25%;
+				padding-top: 35px;
+				height: 0;
+				overflow: hidden;
+				margin-top: 3.3125em;
+			}
+
+			iframe{
+				position: absolute;
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    height: 100%;
+			}
+
+			.row{
+				width: 100%;
+				margin: 0 auto;
+				max-width: 1144px;
+				float: left;
+			}
+
+			.row:before{
+				content:" ";
+				display: table;
+			}
+
+			.grid_img{
+				position: relative;
+				width: 24%;
+				display: inline-block;
+				float: left;
+				margin:.5%;
+			}
+
+			.grid_img img{
+				width: 100%;
+			}
+
+		/*about*/
+			.inline-list{
+				margin:0;
+				padding: 0;
+				float: left;
+				list-style: none;
+			}
+
+			.inline-list li{
+				float: right;
+				margin-left: 0;
+				display: inline-block;
+				margin-right: 5%;
+			}
+
+			.about_list{
+			//	margin: 0 2em;
+				width: 100%;
+			}
+
+			.about_list li{
+				text-align: center;
+				width: 45%;
+			}
+
+			.about_img{
+				margin: 0 auto;
+				width: 200px;
+				height: 200px;
+			}
+
+			.about_list li:first-child{
+				margin-right: 0;
+			}
+
+			.about_list img{
+				position: relative;
+				display: inline-block;
+			}
+
+			section#about{
+				padding:6.5625em 0 3.3125em;
+				background-color: #fbfbfb;
+			}
+
+			#about .wrap{
+				overflow: hidden;
+			}
+
+			.blockquote{
+				margin: 2.5em 1em 0;
+			}
+
+			.about_title{
+				margin-bottom: 6.5625em;
+			}
+
+		/*footer*/
+
+			#footer{
+				padding:2.5em 0;
+				text-align: center;
+			}
+
+			@media (max-width:600px){
+				
+				.about_list li{
+					float: none;
+					width: 90%;
+					margin-bottom: 3.3125em;
+				}
+
+				#impulse h3{
+					max-width: 90%;
+				}
+
+				h2{
+					font-size: 1.5em;
+					line-height: 2em;
+				}
+
+				.site-header ul li{
+					font-size: .8em;
+				}
+
+				a.logo{
+					background-size: auto 70%;
+				}
+
+			}
+
+			@media (max-width:950px){
+
+				.grid_img{
+					position: relative;
+					width: 48%;
+					display: inline-block;
+					float: left;
+					margin:.5%;
+				}
+
+				.optional{
+					display: none;
+				}
+
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id='hero' class='blue'>
+			<div class='wrap'>
+				<header class='site-header'>
+					<a href='/' class='logo'></a>
+					<ul class='inline-list'>
+						<li>
+							<a href='http://www.twitter.com/markazhang'>Twitter</a>
+						</li>
+						<li>
+							<a href='http://www.play-impulse.com/blog'>Blog</a>
+						</li>
+						<li>
+							<a href='http://www.play-impulse.com'>Impulse</a>
+						</li>
+					</ul>
+				</header>
+		<!--		<div class='herounit_media'>
+					<picture>	
+						
+					</picture>
+				</div> -->
+				<div class='herounit_body'>
+					<h2>
+						We're a small Boston-based duo that loves solving puzzles, breaking pots, and, of course, making games.
+					</h2>
+				</div> 
+			</div>
+		</div>
+		<section id='impulse' class='white'>
+			<div class='wrap'>
+				<div class='impulse_title'>
+					<img src='img/impulse_title.svg'/>
+				</div>
+				<h3>
+					<a target='_blank' href='http://www.play-impulse.com'>Impulse</a> is a fast-paced top-down shooter set in a colorful geometric environment, where players must defeat hordes of enemies using a distinctive weapon that offers endless tactical possibilities.
+				</h3>
+				<button><a href='http://play-impulse.com'>Play Now!</a></button>
+				<div class='video_container'>
+					<iframe width="420" height="315" src="https://www.youtube.com/embed/ZkQeRA8H__E" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<button><a href='http://play-impulse.com'>Play Now!</a></button>
+				<div id='impulse_gallery'>
+					<div class='row'>
+						<div class='grid_img'>
+							<img src='img/ss1.png'/>
+						</div>
+						<div class='grid_img'>
+							<img src='img/ss2.png'/>
+						</div>
+						<div class='grid_img'>
+							<img src='img/ss3.png'/>
+						</div>
+						<div class='grid_img'>
+							<img src='img/ss4.png'/>
+						</div>
+					</div>
+					<div class='row optional'>
+						<div class='grid_img'>
+							<img src='img/ss5.png'/>
+						</div>
+						<div class='grid_img'>
+							<img src='img/ss6.png'/>
+						</div>
+						<div class='grid_img'>
+							<img src='img/ss7.png'/>
+						</div>
+						<div class='grid_img'>
+							<img src='img/ss8.png'/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id='about' class='white'>
+			<div class='wrap'>
+				<div class='about_title'>
+					<h2>
+						We're a small crew of two.
+					</h2>
+				</div>
+				<ul class='inline-list about_list'>
+					<li class='about_item'>
+						<div class='about_img'>
+							<img src='img/nichole.png'/>
+						</div>
+						<div class='blockquote'>
+							<h4> Nichole Burton</h4>
+							 <p>
+								Nichole is a UX and graphic designer thriving on a healthy diet of Anime and Videogames. She began playing videogames from the age of three and hasn't put down her controller since. She has a vivacious interest in videogames and their meaning in a cultural context.
+							</p>
+							<p class='optional_text'>
+								Nichole studied Art, Japanese, and Computer Science at Wellesley college, and even studied abroad in Tokyo for a year (admittedly most of it was spent in the geeky Akihabara). She now works as Head of Creative at a New York startup.
+							</p>
+							<p class='optional_text'>
+								<span class='bold'>Favorite games:</span>
+								Last of Us, Okami, the Kingdom Hearts series, Professor Layton (all of 'em), Sonic the Hedgehog, Ristar, Psychonauts, Device 6, Monument Valley, Jak and Daxter, Sly 2, Twilight Princess, and Journey.
+							</p>
+						</div>
+					</li>
+					<li class='about_item'>
+						<div class='about_img'>
+							<img src='img/mark.png'/>
+						</div>
+						<div class='blockquote'>
+							<h4>Mark Zhang</h4>
+							<p>
+								Mark is your typical nerdy Asian guy who did national-level math contests as a kid, graduated from MIT early, and now works at a top tech startup in Boston. In high school, he seized every opportunity to turn school projects into games and produced such novelties as a rhythm-RPG centered around The Scarlet Letter. Suffice to say, Mark loves making games.
+							</p>
+							<p class='optional_text'>
+								Mark strives for depth and originality in his creations, and also values elegance and simplicity. Game elements Mark hates include grinding and being forced to repeat easy sections of a level over and over upon dying. Apart from game development, Mark also enjoys drawing and writing short sci-fi/fantasy pieces.
+							</p>
+							<p class='optional_text'>
+								<span class='bold'>Favorite games:</span>
+								Braid, Portal, The Swapper, Psychonauts, Aquaria, Pikmin, Super Monkey Ball 
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<footer id='footer'>
+			<h2>
+				<a href='mailto:porcelaingames@gmail.com'>porcelaingaimes@gmail.com</a>
+			</h2>
+		</footer>
+	</body>
+</html>
